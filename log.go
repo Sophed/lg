@@ -18,21 +18,21 @@ func timestamp() string {
 
 // Dbug logs debug messages
 func Dbug(msg interface{}) {
-	fmt.Println(timestamp(), dbug+"DBUG"+rset, msg)
+	fmt.Fprintln(os.Stderr, timestamp(), dbug+"DBUG"+rset, msg)
 }
 
 // Info logs informational messages
 func Info(msg interface{}) {
-	fmt.Println(timestamp(), info+"INFO"+rset, msg)
+	fmt.Fprintln(os.Stderr, timestamp(), info+"INFO"+rset, msg)
 }
 
 // Warn logs errors/warning messages
 func Warn(msg interface{}) {
-	fmt.Println(timestamp(), warn+"WARN"+rset, msg)
+	fmt.Fprintln(os.Stderr, timestamp(), warn+"WARN"+rset, msg)
 }
 
 // Fatl logs an error message and calls os.Exit(1), exiting the program
 func Fatl(msg interface{}) {
-	fmt.Println(timestamp(), fatl+"FATL"+rset, msg)
+	fmt.Fprintln(os.Stderr, timestamp(), fatl+"FATL"+rset, msg)
 	os.Exit(1)
 }
