@@ -23,6 +23,6 @@ func main() {
 that's it, literally nothing else
 
 # why not stdlib?
-by default, the Go `log` package doesn't have nice the nicest formatting and while it is possible to edit, it's an (albeit minor) annoyance every time i make a new go project.
+by default, the Go `log` package doesn't have the nicest formatting and while it is possible to edit, it's an (albeit minor) annoyance every time i make a new go project.
 
 also [charmbracelet/log] has a bunch of stuff i don't use
