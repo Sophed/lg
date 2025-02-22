@@ -20,9 +20,28 @@ func main() {
 	lg.Fatl("nooooooooo")
 }
 ```
-that's it, literally nothing else
 
-# why not stdlib?
-by default, the Go `log` package doesn't have the nicest formatting and while it is possible to edit, it's an (albeit minor) annoyance every time i make a new Go project.
+# Callbacks
+Use these to set a function which will be run on every subsequent log
+```go
+func main {
+	lg.SetErroCallback(sendToDiscordWebhook)
+	err := functionThatFails()
+	if err != nil {
+		lg.Erro("@sophed something went wrong in production!!")
+	}
+}
 
-also [charmbracelet/log](https://github.com/charmbracelet/log) has a bunch of stuff i don't use
+func sendToDiscordWebhook() {
+  	...
+}
+
+func functionThatFails() error {
+  	...
+}
+```
+
+# Why not stdlib?
+By default, the Go `log` package doesn't have the nicest formatting and while it is possible to edit, it's an (albeit minor) annoyance every time I make a new Go project. [charmbracelet/log](https://github.com/charmbracelet/log) has a bunch of stuff I wouldn't use.
+
+At the end of the day I mainly just like building and using my own tools :)
