@@ -1,13 +1,13 @@
 # lg
 ![image](preview.png)
 
-# usage
-add the package to your project
+# Usage
+Add the package to your project
 ```
 go get https://github.com/sophed/lg
 ```
 
-the following functions will then be available
+The following functions will then be available
 ```go
 package main
 
