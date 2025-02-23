@@ -28,7 +28,7 @@ func main {
 	lg.SetErroCallback(sendToDiscordWebhook)
 	err := functionThatFails()
 	if err != nil {
-		lg.Erro("@sophed something went wrong in production!!")
+		lg.Erro("something went wrong in production, better alert send a discord alert!")
 	}
 }
 
